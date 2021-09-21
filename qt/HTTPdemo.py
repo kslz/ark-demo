@@ -21,6 +21,7 @@ class Stats:
         self.ui.addBtn.clicked.connect(self.add_line)
         self.ui.removeBtn.clicked.connect(self.remove_line)
         self.ui.sendBtn.clicked.connect(self.send_request)
+        self.ui.clearBtn.clicked.connect(self.clear)
 
     def add_line(self):
         rowcount = self.ui.headerTable.rowCount()
@@ -53,6 +54,8 @@ class Stats:
         print(res.text)
         self.ui.responseShow.append(res.text)
 
+    def clear(self):
+        self.ui.responseShow.setText('')
 
 
 def main():
