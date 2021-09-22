@@ -28,7 +28,7 @@ def main():
 
 
 def r_file(path):
-    with open(path, 'r') as f:
+    with open(path, 'r', encoding="UTF-8") as f:
         return f.read()
 
 
@@ -41,7 +41,7 @@ def w_file(path, text, mode):
     :param mode: 写入模式 a为追加 w为覆写
 
     """
-    with open(path, mode) as f:
+    with open(path, mode, encoding="UTF-8") as f:
         f.write(text)
 
 
